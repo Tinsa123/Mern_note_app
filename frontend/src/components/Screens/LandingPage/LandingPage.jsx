@@ -1,13 +1,18 @@
 import React from 'react'
-import {Container,Row} from 'react-bootstrap'
+import {Button, Col, Container,Row} from 'react-bootstrap'
+import "./LandingPage.css"
+import { useNavigate } from 'react-router-dom'
 
 const LandingPage = () => {
+  const navigate=useNavigate()
   return (
-    <div>
-      <Container>
-        <Row>Notes are safe here</Row>
+
+      <Container  className='landing'>
+        <Row><h2>Welcome Notes are safe here</h2></Row>
+        <Row><Col><Button className='m-1' variant="primary" onClick={()=>navigate("/login")}>Login</Button></Col>
+        <Col><Button className='m-1' variant="primary">SignUP</Button></Col></Row>
       </Container>
-    </div>
+  
   )
 }
 

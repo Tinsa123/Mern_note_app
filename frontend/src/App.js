@@ -1,17 +1,25 @@
 
 import './App.css';
-import Main from './components/Main/Main';
-import Footer from './components/footer/Footer';
-import Header from './components/header/Header';
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import LandingPage from './components/Screens/LandingPage/LandingPage';
+import MyNotes from './components/Screens/MyNotes/MyNotes';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter,Routes,Route} from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-     <Header/>
-     <Main/>
-     <Footer/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Dashboard/>} >
+      <Route path="myNotes" element={<MyNotes/>}/>
+      <Route path='login' element={<Login/>}/>
+      <Route path="*" element={""}/>
+    </Route>
+      {/* <Route path="/dashboard" component={<LandingPage/>} />
+      <Route path="/myNotes" component={<MyNotes/>} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -4,12 +4,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <Navbar expand="md" style={{backgroundColor:"#158cba"}}>
       <Container >
-        <Navbar.Brand href="#">Notes Store</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/" style={{"textDecoration":"none",color:"unset"}}>Notes Store</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -24,23 +26,23 @@ function Header() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-primary">Search</Button>
+            <Button variant="primary">Search</Button>
           </Form>
           
            
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
+            <Nav.Link >
+              <Link to="/myNotes" style={{"textDecoration":"none",color:"unset"}}>My Notes</Link>
+              </Nav.Link>
+          
             </Nav>
-            {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+            <NavDropdown title="Setting" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Tinsa Baby</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
-                Another action
+                Logout
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown> */}
+             
+            
+            </NavDropdown>
             {/* <Nav.Link href="#" disabled>
               Link
             </Nav.Link> */}

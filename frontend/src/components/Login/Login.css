@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+.formcontainer{
+    display:flex;
+    flex-direction: column;
+    font: 1em "Work Sans";
+    justify-content: center;
+  
+}
+.formcontainer input{
+    margin: 1em 0;
+    padding: 0.5em;
+    flex:1 0 0;
+    height: 1em;
+    border-radius: 8px;
+    
+}
+.formcontainer button{
+    margin: 1em 0;
+    padding: 0.5em;
+    height:fit-content;
+    width: fit-content;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width :600px){
+    .formcontainer input{
+        margin: 1em 0;
+        padding: 0.5em;
+        flex:1 0 0;
+        height: 1em;
+        border-radius: 8px;
+        font-size: 2em;
+        
+    }
+    .formcontainer button{
+        margin: 1em 0;
+        padding: 0.5em;
+        height:fit-content;
+        font-size: 2em;
+        width: fit-content;
+        border-radius: 8px;
+    }
+}
